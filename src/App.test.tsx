@@ -1,9 +1,17 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { shallow } from 'enzyme';
 import App from './App';
 
-test('renders learn react link', () => {
-  const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+let wrapper;
+
+beforeEach(() => {
+  wrapper = shallow(<App />);
+});
+
+describe('App component tests:', () => {
+  test('it renders the title', () => {
+    expect(wrapper.find('#title').text()).toBe(
+      "It's beginning to look a lot like Quizzmas"
+    );
+  });
 });

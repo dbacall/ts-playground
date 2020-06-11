@@ -14,4 +14,6 @@ describe('App component tests:', () => {
       "It's beginning to look a lot like Quizzmas"
     );
   });
+
+  test('', () => {});
 });

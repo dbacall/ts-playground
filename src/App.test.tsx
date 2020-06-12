@@ -15,5 +15,5 @@ describe('App component tests:', () => {
     );
   });
 
-  test('', () => {});
+  test('It renders a question', () => {});
 });
